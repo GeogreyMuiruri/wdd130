@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px;
@@ -24,7 +28,9 @@ main img {
 }
 
 aside {
+    width: 100%;
     max-width: 360px;
+    margin: 15px;
     padding: 20px;
     border: 1px solid #bbb;
     background-color: #f2f2f2;
