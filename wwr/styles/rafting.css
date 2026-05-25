@@ -6,7 +6,7 @@
     --accent1-color: #80b7d057;
     --accent2-color: #FFD166;
 
-    --nav-hover-background-color: #75ff6656;
+    --nav-hover-background-color: #FFD166;
     --nav-link-color: #000000;
     --nav-background-color: #80b7d057;
 
@@ -38,6 +38,7 @@ h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--heading-color);
+    text-align: center;
 
 }
 
@@ -121,5 +122,29 @@ article {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
     background-color: var(--secondary-color);
+}
+
+footer p {
+    margin: 0;
+
+}
+
+footer nav.socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+footer nav.socialmedia a {
+    display: inline-flex;
+}
+
+.socialmedia img {
+    width: 24px;
+    height: auto;
 }
