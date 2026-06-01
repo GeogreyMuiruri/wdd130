@@ -98,8 +98,7 @@ header nav a:hover {
 }
 
 p,
-section,
-article {
+section {
     margin: 16px;
     padding: 8px;
     color: var(--text-color);
@@ -111,6 +110,9 @@ article {
 }
 
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     border: 1px solid #ddd;
     overflow: hidden;
@@ -123,7 +125,7 @@ article {
     object-fit: cover;
 }
 
-hero article p {
+.hero article p {
     flex: 1;
     margin: 0;
 }
