@@ -26,12 +26,32 @@ body {
     color: var(--primary-color);
 }
 
-header,
-main,
-footer {
+main {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
     width: 840px;
     margin: 0 auto;
 
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: var(--nav-background-color);
+    padding: 12px 24px;
+    width: 100%;
+}
+
+header img {
+    width: 90px;
+    height: auto;
+    grid-column: 1;
 }
 
 h1,
@@ -43,24 +63,33 @@ h2 {
 }
 
 header nav {
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     background-color: var(--nav-background-color);
 }
 
 header nav ul {
-    list-style: none;
     display: flex;
-    gap: 16px;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    gap: 8px;
     margin: 0;
     padding: 0;
 }
 
 header nav a {
     display: block;
-    padding: 12px 16px;
+    padding: 8px 18px;
+    border: 1px solid #999;
+    border-radius: 4px;
     text-decoration: none;
     color: var(--nav-link-color);
+    background-color: #fff;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
 }
 
 header nav a:hover {
@@ -83,12 +112,20 @@ article {
 
 .hero {
     position: relative;
+    border: 1px solid #ddd;
+    overflow: hidden;
 }
 
-.hero img {
+.hero-bg {
     display: block;
     width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
+}
+
+hero article p {
+    flex: 1;
+    margin: 0;
 }
 
 .hero article img {
@@ -101,27 +138,122 @@ article {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    opacity: 0.9;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: auto;
+    padding: 10px 20px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    color: var(--heading-color);
+    z-index: 2;
 
 }
 
 .hero article {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    max-width: 1000px;
+
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 85%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
     background-color: var(--accent2-color);
-    margin: 0;
-    padding: 12px;
+    padding: 20px;
 }
 
-footer {
+.history-section {
+    border: 1px solid #ddd;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.history-section h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+}
+
+.history-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.history-layout .history-text {
+    flex: 1;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.history-layout .history-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: #3b3b8e;
+}
+
+.adventure-section {
+    border: 1px solid #ddd;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.adventure-section h2 {
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.gallery figure {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #d0d0d0;
+    display: block;
+}
+
+.gallery figure figcaption {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    margin-top: 6px;
+    text-align: center;
+}
+
+.gallery .hero-section footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,4 +279,16 @@ footer nav.socialmedia a {
 .socialmedia img {
     width: 24px;
     height: auto;
+}
+
+footer {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background-color: var(--nav-background-color);
 }

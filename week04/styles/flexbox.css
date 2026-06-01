@@ -1,32 +1,23 @@
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    margin: 1rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.flex-container {
-    border: 3px dashed darkcyan;
-    background-color: lightyellow;
+.container {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 50px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+
 }
 
-.flex-item {
-    width: 250px;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 20%);
-    padding: 0.5rem;
-    background-color: #bbb;
-    color: #333;
-}
+.item {
+    background-color: rgb(82, 13, 62);
+    color: aquamarine;
+    font-size: 35px;
+    padding: 20px;
+    margin: 10px;
 
-.item1 {
-    min-height: 100px;
-}
-
-.item2 {
-    min-height: 200px;
-}
-
-.item3 {
-    min-height: 300px;
 }
